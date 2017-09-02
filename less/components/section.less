@@ -2,37 +2,91 @@
 
 .section {
   position: relative;
-  z-index: 1;
   padding: 50px 0;
+
   &-header {
     padding: 36px 0;
   }
-  &-body {
-	
-  }
+
+  &-body {}
+
   &-footer {
-	padding-top: 75px;
-	padding-bottom: 35px; 
+    padding-top: 75px;
+    padding-bottom: 35px;
   }
-  &-heading {
-	
-  }
-  &-description {
-	
-  }
+
+  &-heading {}
+
+  &-description {}
+
   &-overlay {
-	background-size: cover;
-	background-position: 50% 50%;
-	background-color: inherit;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: -100;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
+
+  &-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    &-half {
+      top: 25%;
+      bottom: 25%;
+    }
+  }
+
+  &-foreground {
+    position: relative;
+    min-height: inherit;
+  }
+
   &-fill-height {
-	min-height: 100vh;
+    min-height: 100vh;
   }
 }
 
+.section-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  // margin: 0 -30px;
+  .slick-slider {
+    max-width: 100%;
+  }
+
+  .list-social {
+    flex-grow: 1;
+    max-width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+  @media (max-width: 539px) {
+    flex-direction: column;
+
+    .list-social {
+      padding-left: 20px;
+      flex-direction: row;
+      position: absolute;
+      z-index: 10;
+      padding-top: 10px;
+      align-self: flex-start;
+
+      a {
+        color: #fff;
+
+        svg {
+          fill: currentcolor;
+        }
+      }
+    }
+  }
+}

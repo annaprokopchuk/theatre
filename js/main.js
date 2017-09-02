@@ -1,20 +1,28 @@
-$('.slider').slick({
-    dots: true,
-	vertical: true,
- 	verticalSwiping: true,
- 	arrows: false
-	// autoplay: true,
- //    autoplaySpeed: 2000,
+$('.slider-main').slick({
+  dots: true,
+  vertical: true,
+  verticalSwiping: true,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 539,
+      settings: {
+        vertical: false,
+      }
+    }
+  ]
 });
 
 function toggler() {
-		$('[data-toggler]').on('click', function(e) {
-    	var $this = $(this);
-      var hash = $this.attr('href') || $this.data('target');
-      if (!hash) return false;
-      $this.toggleClass('is-active');
-      $(hash).toggleClass('is-show');
-    })
+  $('[data-toggler]').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var hash = $this.attr('href') || $this.data('target');
+    if (!hash)
+      return false;
+    $this.toggleClass('is-active');
+    $(hash).toggleClass('is-show');
+  })
 }
 
 toggler();
