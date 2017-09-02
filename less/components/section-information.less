@@ -1,0 +1,29 @@
+.section-information {
+  background-color: @global-primary-background;
+  .description-performance {
+  	margin-bottom: 60px;
+  }
+  .description-container {
+  	margin-left: 74px;
+  	span {
+  	  font-family: @global-font-family;
+  	}
+  }
+  .short-description {
+  	margin-bottom: 45px;
+  	.description-container {
+	  max-width: 793px;
+      letter-spacing: 1px;
+  	}
+  	p {
+  	  display: inline-block;
+  	}
+  }
+}
+
+@media (max-width: 540px) {
+  .section-information .description-container {
+    margin-left: 15px;
+  }
+}
+

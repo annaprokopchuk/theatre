@@ -1,0 +1,104 @@
+.section-news {
+  padding-bottom: 56px;
+  background-color: @global-primary-background;
+  p {
+  	margin-bottom: 30px;
+  }
+  .card-description {
+    .name {
+      font-size: 18px;
+      font-weight: @font-weight-regular;
+    }
+    span {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.news-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.heading {
+  font-size: @font-size-18;
+  margin-bottom: 46px;
+  font-family: @secondary-font-family;
+  font-weight: @font-weight-bold;
+    &:before {
+      content: "";
+      height: 3px;
+      width: 8px;
+      background: @global-color;
+      display: block;
+      margin-bottom: 24px;
+    }
+}
+
+.card-title {
+  font-family: @secondary-font-family;
+  font-weight: @font-weight-regular;
+}
+
+.news-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-new {
+  max-width: 400px;
+  margin-right: 60px;
+  .description {
+  	line-height: 27px;
+  }
+  .data {
+  	margin-bottom: 26px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: @font-weight-bold;
+  }
+}
+
+.birthdays-container {
+  display: flex;
+  flex-direction: column;
+  .card-img {
+    width: 227px;
+    height: 227px;
+  }
+}
+
+.column-about {
+  column-count: 2;
+  column-gap: 65px;
+  p {
+  	font-size: 14px;
+  }
+  h4 {
+  	margin-top: 55px;
+  }
+}
+
+@media (max-width: 960px) {
+  .news-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .column-about {
+    column-gap: 40px;
+  }
+}
+
+@media (max-width: 720px) {
+  .news-list {
+    flex-direction: column;
+  }
+  .news-wrap {
+    align-items: center;
+  }
+  .column-about {
+    column-count: 1;
+  }
+}
