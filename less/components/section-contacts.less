@@ -1,50 +1,74 @@
 .section-contacts {
-  h2 {
-  	font-weight: @font-weight-light;
-  	font-size: 72px;
-  	font-family: @font-family-light;
-  	margin-bottom: 35px;
+  .section-title {
+    font-weight: @font-weight-light;
+    font-size: 72px;
+    font-family: @font-family-light;
+    margin-bottom: 35px;
+    @media (max-width: 767px) {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
   }
+
   .contacts-wrap {
-  	margin-bottom: 55px;
+    margin-bottom: 55px;
+    @media (max-width: 767px) {
+      margin-bottom: 15px;
+    }
   }
+
   .content {
-  	display: flex;
-  	margin-left: -55px;
-  	margin-right: -55px;
-  	font-size: 18px;
-  	justify-content: flex-start;
-  	flex-wrap: wrap;
-  	.item-content {
-	  margin: 0 55px 15px;
-  	}
-  	.mail a {
-  	  color: @link-color;
-  	}
+    display: flex;
+    margin-left: -55px;
+    margin-right: -55px;
+    font-size: 18px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+
+    .item-content {
+      margin: 0 55px 15px;
+    }
+
+    .mail a {
+      color: @link-color;
+    }
   }
+
+  .place,
+  .addres,
+  .contacts  {
+    padding-left: 0;
+    list-style: none;
+  }
+
   .place li {
-  	margin-bottom: 10px;
+    margin-bottom: 10px;
   }
+
   .addres li {
-  	margin-bottom: 10px;
+    margin-bottom: 10px;
   }
+
   .contacts li {
-  	margin-bottom: 15px;
+    margin-bottom: 15px;
   }
+
   .map-wrap {
-  	display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+
     img {
-	  width: 100%;
-    max-width: 2000px;
-    object-fit: cover;
-    max-height: 500px;
-    min-height: 265px;
+      width: 100%;
+      max-width: 2000px;
+      object-fit: cover;
+      max-height: 500px;
+      min-height: 265px;
     }
   }
 }
-
 @media (max-width: 720px) {
   .section-contacts {
     h2 {

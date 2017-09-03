@@ -5,9 +5,37 @@ $('.slider-main').slick({
   arrows: false,
   responsive: [
     {
+      breakpoint: 639,
+      settings: {
+        vertical: false
+      }
+    }
+  ]
+});
+
+$('.slider-gallery').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  asNavFor: '.slider-gallery-nav',
+  centerMode: true
+});
+
+$('.slider-gallery-nav').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.slider-gallery',
+  dots: false,
+  arrows: false,
+  focusOnSelect: true,
+  centerMode: true,
+  centerPadding: '0px',
+  responsive: [
+    {
       breakpoint: 539,
       settings: {
-        vertical: false,
+        slidesToShow: 3
       }
     }
   ]

@@ -103,21 +103,19 @@
 .slick-arrow.slick-hidden {
   display: none;
 }
-
-
 // custom styles
 .slider {
   opacity: 0;
   transition: opacity 1s;
+
   &.slick-initialized {
     opacity: 1;
   }
 }
+
 .slick-dots {
   padding-left: 0;
-  margin: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
   list-style: none;
   display: -webkit-flex;
   display: -ms-flex;
@@ -125,8 +123,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
   li {
     margin: 5px;
+
     button {
       border: none;
       background: none;
@@ -135,6 +135,7 @@
       line-height: 0;
       padding: 5px;
       cursor: pointer;
+
       &::before {
         content: '';
         display: -webkit-flex;
@@ -147,8 +148,9 @@
         background-color: transparent;
       }
     }
-    &:hover,
-    &.slick-active {
+
+    &.slick-active,
+    &:hover {
       button {
         &::before {
           background-color: currentcolor;
@@ -167,18 +169,94 @@
   flex-basis: 0;
   flex-grow: 20;
   max-width: 100%;
+
   .slick-slide {
     width: 100% !important;
   }
+
   .slick-list {
     flex-basis: 0;
     flex-grow: 20;
     max-width: 100%;
   }
+
   .slick-dots {
     flex-direction: column;
     margin: 0;
     flex-grow: 1;
     max-width: 100%;
+  }
+}
+// slick gallery
+.slider-gallery {
+  background-color: #252525;
+  padding: 40px 50px;
+  margin-bottom: 30px;
+  @media (max-width: 767px) {
+    padding: 20px 5px;
+    margin-bottom: 15px;
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slider-image {
+    padding-bottom: 66.6%;
+    height: 0;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slick-slide {
+    padding: 0 25px;
+    outline: none;
+    @media (max-width: 767px) {
+      padding: 0 10px;
+    }
+
+    &.slick-active {
+      position: relative;
+    }
+  }
+}
+
+.slider-gallery-nav {
+  .slick-slide {
+    padding: 1px;
+
+    img {
+      filter: grayscale(1);
+    }
+
+    &.slick-current {
+      outline: none;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 8px solid #ec1010;
+        z-index: 1;
+      }
+
+      img {
+        filter: grayscale(0);
+      }
+    }
   }
 }

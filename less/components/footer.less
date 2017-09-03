@@ -1,102 +1,129 @@
 @link-color: #0b317a;
 
 .footer {
-  padding: 75px 0 36px 0;
-  p {
-  	margin-bottom: 8px;
-  	font-size: 13px;
-    display: block;
+  padding: 75px 0 36px;
+  font-size: 13px;
+
+  @media (max-width: 767px) {
+    padding: 15px 0;
   }
+
+  p {
+    margin-bottom: 8px;
+    // font-size: 13px;
+  }
+
   .footer-container {
-  	display: flex;
+    display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     flex-wrap: wrap;
   }
+
   .col-left {
-  	display: flex;
-  	flex-direction: column;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 30px;
   }
+
   .link-contact {
-  	margin: 14px 0;
+    margin: 14px 0;
   }
+
   .footer-info {
     margin-bottom: 45px;
-    a {
-  	  color: @link-color;
-    }
   }
+
   .col-right {
-  	display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 30px;
   }
+
   .copyright {
     margin-bottom: 30px;
   }
 
-  .copyright, .breadcrumbs {
-  	font-size: 13px;
-  	text-align: right;
+  .copyright {
+    text-align: right;
   }
 
   .list-social {
-  	margin-bottom: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: flex-end;
     margin-left: -48px;
+
     .social-icon {
       margin-left: 48px;
       padding: 5px;
+
       &:hover svg {
         fill: @global-link-hover-color;
       }
     }
+
+    @media (max-width: 767px) {
+      margin-left: -10px;
+      justify-content: center;
+      .social-icon {
+        margin-left: 10px;
+      }
+    }
   }
+
   .list-partners {
-  	display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-left: -15px;
     margin-right: -15px;
     flex-wrap: wrap;
+
     .list-item {
       padding: 15px;
     }
   }
+
   .card-partner {
     line-height: 0;
   }
 }
-
+.footer-bottom {
+  text-align: right;
+}
 @media (max-width: 1245px) {
   .footer-container {
     flex-direction: column;
     max-width: 720px;
     margin: 0 auto;
+
     .copyright {
-    text-align: center;
+      text-align: center;
     }
   }
+
   .footer-info {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
+
   .col-right {
     align-items: center;
   }
+
   .list-partners {
     .list-item {
       margin: 0 15px;
     }
   }
+
   .footer-bottom {
     display: flex;
     justify-content: center;
+    text-align: center;
   }
-
 }

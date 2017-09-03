@@ -1,29 +1,42 @@
 .section-information {
   background-color: @global-primary-background;
+
   .description-performance {
-  	margin-bottom: 60px;
+    margin-bottom: 60px;
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
+
   .description-container {
-  	margin-left: 74px;
-  	span {
-  	  font-family: @global-font-family;
-  	}
+    margin-left: 74px;
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+
+    span {
+      font-family: @global-font-family;
+    }
   }
+
   .short-description {
-  	margin-bottom: 45px;
-  	.description-container {
-	  max-width: 793px;
+    margin-bottom: 45px;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+    .description-container {
+      max-width: 793px;
       letter-spacing: 1px;
-  	}
-  	p {
-  	  display: inline-block;
-  	}
+    }
+
+    p {
+      display: inline-block;
+    }
   }
 }
-
 @media (max-width: 540px) {
   .section-information .description-container {
     margin-left: 15px;
   }
 }
-

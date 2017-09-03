@@ -1,20 +1,30 @@
 .list-performances {
   display: flex;
   justify-content: space-between;
-  margin-left: -75px;
-  margin-right: -53px;
+  margin: 0 -5%;
+  padding-left: 0;
+  overflow: hidden;
+
   .list-item {
-  	width: 25%;
-  	position: relative;
+    width: 25%;
+    padding: 0 5%;
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
   }
-  .list-item + .list-item:before {
-  	content: "";
-  	display: inline-block;
-  	width: 1px;
-  	height: 174px;
-  	background: @global-color;
-  	position: absolute;
-  	top: 27px;
+
+  .list-item:before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    width: 1px;
+    height: 174px;
+    background: @global-color;
+    position: absolute;
+    top: 27px;
   }
 }
 
@@ -23,22 +33,24 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
-
   }
+
   .list-item {
     font-size: 14px;
     width: 33.3%;
     margin-bottom: 40px;
   }
+
   .card-img {
     min-height: auto;
+
     img {
       width: 100%;
     }
   }
-  .list-item + .list-item:before {
-    width: 0;
-  }
+  // .list-item + .list-item:before {
+  //   width: 0;
+  // }
   // .card-performance {
   //   box-sizing: content-box;
   // }
@@ -58,28 +70,57 @@
   //   width: 284px;
   // }
 }
-
 @media (max-width: 960px) {
   .list-performances {
     flex-wrap: wrap;
+
     .list-item {
       width: 50%;
     }
   }
+
   .performance-wrap {
     .list-item {
       width: 50%;
     }
+
     .list-performances {
       justify-content: center;
     }
   }
 }
-
 @media (max-width: 720px) {
   .performance-wrap {
     .list-item {
       width: 70%;
+    }
+  }
+}
+
+.list-child-width-auto {
+  margin-left: -5%;
+  margin-right: -5%;
+
+  > .list-item {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: auto;
+    align-items: flex-start;
+  }
+}
+
+.list-performances-overview {
+  margin-left: -5%;
+  margin-right: -5%;
+  .list-item {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: auto;
+    min-width: 33.33%;
+    align-items: flex-start;
+
+    &::before {
+      display: none;
     }
   }
 }
