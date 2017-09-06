@@ -7,7 +7,8 @@ $('.slider-main').slick({
     {
       breakpoint: 639,
       settings: {
-        vertical: false
+        vertical: false,
+        verticalSwiping: false,
       }
     }
   ]
