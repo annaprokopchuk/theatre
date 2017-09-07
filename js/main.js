@@ -5,7 +5,7 @@ $('.slider-main').slick({
   arrows: false,
   responsive: [
     {
-      breakpoint: 639,
+      breakpoint: 768,
       settings: {
         vertical: false
       }
