@@ -4,6 +4,7 @@
   margin: 0 -5%;
   padding-left: 0;
   overflow: hidden;
+  flex-wrap: wrap;
 
   .list-item {
     width: 25%;
@@ -72,8 +73,6 @@
 }
 @media (max-width: 960px) {
   .list-performances {
-    flex-wrap: wrap;
-
     .list-item {
       width: 50%;
     }
@@ -95,6 +94,13 @@
       width: 70%;
     }
   }
+  .list-performances {
+    .list-item {
+      width: 100%;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .list-child-width-auto {
@@ -106,6 +112,16 @@
     padding-right: 5%;
     width: auto;
     align-items: flex-start;
+  }
+}
+
+.list-items-center {
+  align-items: center;
+  justify-content: center;
+  .list-item {
+    &::before {
+      display: none;
+    }
   }
 }
 
