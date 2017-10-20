@@ -13,7 +13,7 @@ $(".slider-main").slick({
     verticalSwiping: !0,
     arrows: !1,
     responsive: [ {
-        breakpoint: 768,
+        breakpoint: 1025,
         settings: {
             vertical: !1,
             verticalSwiping: !1
